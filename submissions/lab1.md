@@ -108,7 +108,7 @@ Sections: `Goal`, `Changes`, `Testing`, `Artifacts & Screenshots`, and `Checklis
 
 Checklist items: PR title follows `feat(labN): <topic>`; no secrets or large temporary files are committed; `submissions/labN.md` exists.
 
-Auto-fill evidence: 
+Auto-fill evidence: https://github.com/coilgung/DevSecOps-Intro/pull/1
 
 
 
@@ -124,3 +124,4 @@ Workflow path: `.github/workflows/lab1-smoke.yml`.
 
 The workflow starts on pull requests to `main`, has only `contents: read`, launches `bkimminich/juice-shop:v20.0.0`, and checks the version endpoint every five seconds for up to 60 seconds. This gives the application enough time to initialise instead of failing the job too early.
 
+Success in 16 seconds: https://github.com/coilgung/DevSecOps-Intro/actions/runs/34788348476/job/103807858844
