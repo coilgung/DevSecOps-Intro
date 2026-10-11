@@ -55,7 +55,7 @@ The most actionable are zap and semgrep findings. stuff like sql injection point
 |kics palumi|6|1|2|1|0|2|
 |total|583|36|253|234|47|13|
 
-Median and oldest - 0 days because the findings dates are assigned on import. Share of active findings currently inside SLA: 97.7%, as the info ones dont have sla dates set. Aside from info its 100%.
+Median and oldest - 0 days because the findings dates are assigned on import, got with GET /api/v2/findings/?active=true&limit=1000 and jq '[.[].age]'. Share of active findings currently inside SLA: 97.7%, as the info ones dont have sla dates set. Aside from info its 100%. Query - jq '[.[] | select(.sla_days_remaining != null)] | length as $t | [.[] | select(.sla_days_remaining >= 0)] | length as $ok | ($ok/$t)*100'.
 
 Labs 8 and 9 produced supply-chain signing, runtime detection, attestation, and policy-as-code evidence not represented in these scanner numbers, so they should be tracked as manual control evidence linked to same product and reviewed during release readiness.
 
